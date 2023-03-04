@@ -1,4 +1,6 @@
 <?php
+require APPPATH . 'libraries/Rest_Controller.php';
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Invoice extends REST_Controller
 {

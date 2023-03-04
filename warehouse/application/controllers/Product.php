@@ -1,4 +1,5 @@
 <?php
+require APPPATH . 'libraries/Rest_Controller.php';
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Product extends REST_Controller
 {
