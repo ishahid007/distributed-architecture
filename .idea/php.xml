@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/order/application/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/order/application/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/order/application/vendor/composer" />
+      <path value="$PROJECT_DIR$/order/application/vendor/kenjis/ci-phpunit-test" />
+      <path value="$PROJECT_DIR$/order/application/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/order/application/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/order/application/vendor/php-amqplib/php-amqplib" />
+      <path value="$PROJECT_DIR$/order/application/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/order/application/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/order/application/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/order/application/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/order/application/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/order/application/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/order/application/vendor/chriskacerguis/codeigniter-restserver" />
+      <path value="$PROJECT_DIR$/order/application/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/order/application/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/order/application/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/order/application/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/order/application/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/order/application/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/order/application/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/order/application/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/order/application/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/order/application/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/order/application/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/order/application/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/order/application/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/order/application/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/order/application/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/order/application/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/order/application/vendor/phpunit/php-code-coverage" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.0" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/order/application/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+</project>

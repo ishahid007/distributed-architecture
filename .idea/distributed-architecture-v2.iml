@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/paragonie/constant_time_encoding" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/kenjis/ci-phpunit-test" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/php-amqplib/php-amqplib" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phpseclib/phpseclib" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/chriskacerguis/codeigniter-restserver" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phpunit/php-token-stream" />
+      <excludeFolder url="file://$MODULE_DIR$/order/application/vendor/phpunit/php-code-coverage" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
