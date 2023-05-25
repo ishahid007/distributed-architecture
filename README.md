@@ -43,7 +43,6 @@ GET localhost:8083/index.php/api/v1/user
 ```
 
 #### Create a new user
-(Usually called by helper after order check out)
 ```http
 POST localhost:8083/index.php/api/v1/user
 ```
@@ -114,7 +113,6 @@ GET localhost:8083/index.php/api/v1/assignment
 ```
 
 #### Create a new assignment
-(Usually called by helper after order check out)
 ```http
 POST localhost:8083/index.php/api/v1/assignment
 ```
@@ -172,7 +170,6 @@ GET localhost:8083/index.php/api/v1/solution
 ```
 
 #### Create a new solution
-(Usually called by helper after order check out)
 ```http
 POST localhost:8083/index.php/api/v1/solution
 ```
@@ -216,7 +213,6 @@ GET localhost:8083/index.php/api/v1/result
 ```
 
 #### Create a new result
-(Usually called by helper after order check out)
 ```http
 POST localhost:8083/index.php/api/v1/result
 ```
