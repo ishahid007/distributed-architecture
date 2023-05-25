@@ -33,6 +33,39 @@ Username: user
 Password: password
 ```
 
+
+## ADMIN PANEL
+
+## How It Works
+
+**Start** 
+http://localhost:8081/login
+E-mail: admin@admin.com
+Password: 123456
+
+
+**1** - Dashboard => Contains all the stats information regarding to the Total number of Users, Assignments and Total Solutions submitted so far.
+
+**2a** - Assignments (List)
+http://localhost:8081/assignments
+View all available assignments along with the title, deadline.
+You can "View / Edit" and "Delete" the assignment.
+
+**2b** - Assignments (View)
+
+Click ON "View" button in order to view the assignment or edit that too
+Also, clicking on "Title" will do the same action.
+
+**2c** - Assignments (Create)
+
+Click ON "Create New" button in order to create a new entry of assignment.
+
+**2d** - Assignments (Delete)
+
+Click ON "Delte" button in order to delete the assignment.
+
+
+
 ## API
 
 
