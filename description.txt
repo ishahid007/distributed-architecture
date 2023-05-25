@@ -1,0 +1,3 @@
+Distributed Architecture, A Hackerrank based micro-services project in Codeigniter PHP Framework.
+Just do the "docker-compose up" and the rest, It will proceed to the manual working...
+A Project based on users(admin, students), assignments, solutions upload (by students) and result upload (by admin) using REST API as guided in the readme file
