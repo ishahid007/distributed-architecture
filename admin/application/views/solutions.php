@@ -24,7 +24,7 @@
 				<div class="box-header">
 					<h3 class="box-title">Listings</h3>
 					<!--  -->
-					<a class="btn btn-info pull-right" href="<?=base_url('solutions/create')?>">Create New</a>
+					
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">

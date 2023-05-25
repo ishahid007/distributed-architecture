@@ -34,20 +34,23 @@ Password: password
 ```
 
 
-## ADMIN PANEL
-
-## How It Works
+## ADMIN PANEL (How It Works)?
 
 **Start** 
+```http
 http://localhost:8081/login
 E-mail: admin@admin.com
 Password: 123456
+```
+
 
 
 **1** - Dashboard => Contains all the stats information regarding to the Total number of Users, Assignments and Total Solutions submitted so far.
 
 **2a** - Assignments (List)
+```http
 http://localhost:8081/assignments
+```
 View all available assignments along with the title, deadline.
 You can "View / Edit" and "Delete" the assignment.
 
@@ -57,14 +60,55 @@ Click ON "View" button in order to view the assignment or edit that too
 Also, clicking on "Title" will do the same action.
 
 **2c** - Assignments (Create)
-
+```http
+http://localhost:8081/assignments/create
+```
 Click ON "Create New" button in order to create a new entry of assignment.
 
 **2d** - Assignments (Delete)
 
-Click ON "Delte" button in order to delete the assignment.
+Click ON "Delete" button in order to delete the assignment.
 
 
+**3a** - Solutions (List)
+```http
+http://localhost:8081/solutions
+```
+View all available solutions along with the assignment title, student name deadline date.
+You can "View / Rate" the solution and "Delete" the solution.
+
+**3b** - Solutions (View)
+
+Click ON "View" button in order to view the solution and rate the solution
+Also, clicking on "Assignment Title" will do the same action.
+
+**3c** - Solutions (Delete)
+
+Click ON "Delete" button in order to delete the solution.
+
+
+
+**4a** - Users (List)
+```http
+http://localhost:8081/users
+```
+View all available users along with the name, email and role.
+You can "View / Edit" and "Delete" the user.
+
+**2b** - Users (View)
+
+Click ON "View" button in order to view the user or edit that too
+Also, clicking on "Title" will do the same action.
+
+**2c** - Users (Create)
+```http
+http://localhost:8081/users/create
+```
+Click ON "Create New" button in order to create a new entry of user (Admin or Student Role).
+
+**2d** - Users (Delete)
+
+Click ON "Delete" button in order to delete the user.
 
 ## API
 
