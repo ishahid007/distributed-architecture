@@ -45,7 +45,7 @@
                   </li>
 
                   <!-- Submit -->
-                  <?php if(!isset($result->id)): ?>
+                  <?php if(!isset($solution->id)): ?>
                      <li>
                          <a href="<?=base_url('assignments/submit/'.$assignment->id.'')?>"><i class="fa fa-bell-o"></i> Action: 
                            <span class="badge bg-red">
@@ -110,7 +110,7 @@
             <?php endif;?>
             
             <!-- Not able to submit if solution is already submitted -->
-            <?php if(!isset($result->id)): ?>
+            <?php if(!isset($solution->id)): ?>
                <div class="box-footer">
                   <div class="pull-right">
                      <button onclick="window.location.href='<?=base_url('assignments/submit/'.$assignment->id.'')?>'" type="button" class="btn btn-default"><i class="fa fa-reply"></i> Reply</button>
