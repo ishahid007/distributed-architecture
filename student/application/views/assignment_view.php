@@ -81,7 +81,7 @@
             </div>
 
             <!-- Your solution -->
-            <?php if(isset($result->id) && !empty($result->description)): ?>
+            <?php if(isset($solution->id) && !empty($solution->description)): ?>
                <div class="box-body no-padding">
                   <div class="mailbox-read-info">
                     
@@ -90,7 +90,7 @@
                   
 
                   <div class="mailbox-read-message">
-                     <textarea style="height: 500px;" readonly disabled class="form-control" id="readonly-textarea-2"><?=$result->description?></textarea>
+                     <textarea style="height: 500px;" readonly disabled class="form-control" id="readonly-textarea-2"><?=$solution->description?></textarea>
                     
                   </div>
                </div>

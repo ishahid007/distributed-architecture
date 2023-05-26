@@ -33,7 +33,7 @@
             <div class="box-body no-padding">
                <ul class="nav nav-pills nav-stacked">
                   <li><a href="javascript:void(0)"><i class="fa fa-inbox"></i> Deadline:
-                     <span class="label label-danger pull-right"><?=$solution->deadline?></span></a>
+                     <span class="label label-danger pull-right"><?=$assignment->deadline?></span></a>
                   </li>
                   <li><a href="#"><i class="fa fa-envelope-o"></i> Submitted: <?=$solution->created_at?></a></li>
 
@@ -68,8 +68,8 @@
             <input type="hidden" name="solution_id" value="<?=$solution->id?>" required>
                <div class="box-body">
                   <div class="mailbox-read-info">
-                     <h3><?=$solution->title?></h3>
-                     <h5>Deadline: <?=$solution->deadline?>
+                     <h3><?=$assignment->title?></h3>
+                     <h5>Deadline: <?=$assignment->deadline?>
                         <span class="mailbox-read-time pull-right"><?=$solution->created_at?></span>
                      </h5>
                      

@@ -33,16 +33,10 @@ class Result_model extends CI_Model
         return $this->db->affected_rows();
     }
 
-    // get result by user id and assignment id
-    public function getSolutionWithResult($user_id, $assignment_id){
-        return $this->db->where("solutions.user_id", $user_id)
-        ->where("solutions.assignment_id", $assignment_id)
-        ->from("solutions")
-        ->join("results", "results.solution_id = solutions.id", 'left')
-        ->select("solutions.*, results.percentage, results.remarks")
-        ->group_by("solutions.id")
-        ->get()
-        ->row_array();
+
+    // get result by solution_id
+    public function get_result_by_solution($id){
+        return $this->db->get_where('results', ['solution_id' => $id])->row_array();
     }
 
 }

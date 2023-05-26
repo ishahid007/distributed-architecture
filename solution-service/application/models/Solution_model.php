@@ -6,26 +6,10 @@ class Solution_model extends CI_Model
     public function getSolution($id = NULL)
     {
         if ($id === NULL) {
-            return $this->db
-            ->select("solutions.*, users.name, assignments.title, assignments.deadline")
-            ->from('solutions')
-            ->join("assignments", "assignments.id = solutions.assignment_id")
-            ->join("users", "users.id = solutions.user_id")
-            ->group_by("solutions.id")
-            ->get()
-            ->result_array();
-        } else {
-            return $this->db
-            ->where("solutions.id", $id)
-            ->select("solutions.*, users.name, assignments.title, assignments.deadline")
-            ->from('solutions')
-            ->join("assignments", "assignments.id = solutions.assignment_id")
-            ->join("users", "users.id = solutions.user_id")
-            ->group_by("solutions.id")
-            ->get()
-            ->row_array();
+            return $this->db->get('solutions')->result_array();
         }
 
+        return $this->db->get_where('solutions', ['id' => $id])->row_array();
     }
 
     // create a new Solution
@@ -47,6 +31,11 @@ class Solution_model extends CI_Model
     {
         $this->db->delete('solutions', ['id' => $id]);
         return $this->db->affected_rows();
+    }
+
+    // get solution by user id and assignment id
+    public function get_solution_by_user_assignment($user_id, $assignment_id){
+        return $this->db->get_where('solutions', ['user_id' => $user_id, 'assignment_id' => $assignment_id])->row_array();
     }
 
 

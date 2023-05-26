@@ -7,6 +7,8 @@ class Admin extends BASE_Controller_Admin {
 	private $assignment_url = "http://php_assignment/index.php/api/v1/assignment";
 	private $solution_url   = "http://php_solution/index.php/api/v1/solution";
 	private $result_url     = "http://php_result/index.php/api/v1/result";
+
+	
 	// 
 	private $user_id;
 
@@ -207,8 +209,17 @@ class Admin extends BASE_Controller_Admin {
         	$data['title']  	  = "Solution #: ".$id;
         	$data['solution']     = $response->data;
         	// 
+
+        	// Fetch the assignment too
+        	$assignment 		= $this->http->request("GET", $this->assignment_url.'/'.$response->data->assignment_id);
+			$assignment 		= json_decode($assignment);
+			// 
+			if($assignment->success == true)
+        		$data['assignment'] = $assignment->data;
+        	// 
+
         	// Fetch the result too
-        	$result 		= $this->http->request("GET", $this->result_url.'user_assignment_solution/'.$response->data->user_id.'/'.$response->data->assignment_id);
+        	$result 		= $this->http->request("GET", $this->result_url.'/solution-result/'.$id);
 			$result 		= json_decode($result);
 			// 
 			if($result->success == true)

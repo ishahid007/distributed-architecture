@@ -30,6 +30,37 @@ services:
         restart: on-failure
         networks:
             - default
+
+  mysql_assignment:
+      image: mysql:8.0
+      container_name: mysql_assignment
+      volumes:
+          - ./assignment-service/assignments.sql:/docker-entrypoint-initdb.d/assignment.sql
+      ports:
+          - "3307:3306"
+      command: --default-authentication-plugin=mysql_native_password
+      environment:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: assignment
+          MYSQL_USER: user
+          MYSQL_PASSWORD: password
+      
+      networks:
+          - default
+  phpmyadmin_assignment:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin_assignment
+      links:
+          - mysql_assignment:db
+      ports:
+          - 9081:80
+      environment:
+          MYSQL_USER: user
+          MYSQL_PASSWORD: password
+          MYSQL_ROOT_PASSWORD: password
+          PMA_HOST: mysql_assignment
+          PMA_PORT: 3306
+
   
  
   # Solution Services
@@ -41,6 +72,38 @@ services:
         restart: on-failure
         networks:
             - default
+
+  mysql_solution:
+      image: mysql:8.0
+      container_name: mysql_solution
+      volumes:
+          - ./solution-service/solutions.sql:/docker-entrypoint-initdb.d/solution.sql
+      ports:
+          - "3308:3306"
+      command: --default-authentication-plugin=mysql_native_password
+      environment:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: solution
+          MYSQL_USER: user
+          MYSQL_PASSWORD: password
+      
+      networks:
+          - default
+  phpmyadmin_solution:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin_solution
+      links:
+          - mysql_solution:db
+      ports:
+          - 9082:80
+      environment:
+          MYSQL_USER: user
+          MYSQL_PASSWORD: password
+          MYSQL_ROOT_PASSWORD: password
+          PMA_HOST: mysql_solution
+          PMA_PORT: 3306
+
+  
  
   
   # Result Services
@@ -53,6 +116,38 @@ services:
         networks:
             - default
 
+  mysql_result:
+      image: mysql:8.0
+      container_name: mysql_result
+      volumes:
+          - ./result-service/results.sql:/docker-entrypoint-initdb.d/result.sql
+      ports:
+          - "3309:3306"
+      command: --default-authentication-plugin=mysql_native_password
+      environment:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: result
+          MYSQL_USER: user
+          MYSQL_PASSWORD: password
+      
+      networks:
+          - default
+  phpmyadmin_result:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin_result
+      links:
+          - mysql_result:db
+      ports:
+          - 9083:80
+      environment:
+          MYSQL_USER: user
+          MYSQL_PASSWORD: password
+          MYSQL_ROOT_PASSWORD: password
+          PMA_HOST: mysql_result
+          PMA_PORT: 3306
+
+  
+
 
   # User Services
   php_user:
@@ -63,36 +158,40 @@ services:
         restart: on-failure
         networks:
             - default
-  mysql_microservices:
+
+  mysql_user:
       image: mysql:8.0
-      container_name: mysql_microservices
+      container_name: mysql_user
       volumes:
-          - ./microservices.sql:/docker-entrypoint-initdb.d/microservices.sql
+          - ./user-service/users.sql:/docker-entrypoint-initdb.d/user.sql
       ports:
-          - "3307:3306"
+          - "3310:3306"
       command: --default-authentication-plugin=mysql_native_password
       environment:
           MYSQL_ROOT_PASSWORD: password
-          MYSQL_DATABASE: microservices
+          MYSQL_DATABASE: user
           MYSQL_USER: user
           MYSQL_PASSWORD: password
       
       networks:
           - default
-  phpmyadmin_microservices:
+  phpmyadmin_user:
       image: phpmyadmin/phpmyadmin
-      container_name: phpmyadmin_microservices
+      container_name: phpmyadmin_user
       links:
-          - mysql_microservices:db
+          - mysql_user:db
       ports:
-          - 9081:80
+          - 9084:80
       environment:
           MYSQL_USER: user
           MYSQL_PASSWORD: password
           MYSQL_ROOT_PASSWORD: password
-          PMA_HOST: mysql_microservices
+          PMA_HOST: mysql_user
           PMA_PORT: 3306
 
   
 volumes:
-    mysql_microservices:
+    mysql_assignment:
+    mysql_solution:
+    mysql_result:
+    mysql_user:

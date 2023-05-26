@@ -34,8 +34,7 @@
 								<th>#</th>
 								<th>Assignment</th>
 								<th>Student</th>
-								<th>Date</th>
-								<th>Status</th>
+								<th>Submitted Date</th>
 								<th>Action</th>
 								
 							</tr>
@@ -49,28 +48,19 @@
 									
 									<td>
 										<a href="<?=isset($solution->assignment_id)?base_url('assignments/view'.'/'.$solution->assignment_id):"javascript:void(0)"?>">
-											<?=$solution->title ?>
+											Assignment #<?=$solution->assignment_id ?>
 										</a>
 									</td>
 
 									<td>
 										<a href="<?=isset($solution->user_id)?base_url('users/view'.'/'.$solution->user_id):"javascript:void(0)"?>">
-											<?=$solution->name ?>
+											Student #<?=$solution->user_id ?>
 										</a>
 									</td>
 
 									<td>
 										<?=$solution->created_at?>
 									</td>
-									<td>
-										<span class="badge">
-											<?=(strtotime($solution->deadline) < strtotime($solution->created_at)) ? 'Late' : "On Time"?>
-										</span>
-										
-									</td>
-
-							
-					
 									
 									<td>
 										<a class="btn btn-info" href="<?=isset($solution->id)?base_url('solutions/view'.'/'.$solution->id):"javascript:void(0)"?>">

@@ -57,4 +57,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['api/v1/result']        									= 'result';
 $route['api/v1/result/(:any)'] 									= 'result/$1';
-$route['api/v1/result/user_assignment_solution/(:any)/(:any)']  = 'result/user_assignment_solution/$1/$2';
+$route['api/v1/result/solution-result/(:any)']  				= 'result/solution_result/$1';

@@ -57,6 +57,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['api/v1/solution']        = 'solution';
 $route['api/v1/solution/(:any)'] = 'solution/$1';
-
+$route['api/v1/solution/user-assignment-solution/(:any)/(:any)']  = 'solution/user_assignment_solution/$1/$2';
 
 $route['api/v1/solution/count_solutions'] = 'solution/count_solution';

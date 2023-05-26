@@ -139,6 +139,44 @@ class Solution extends REST_Controller
     }
 
 
+    // Get solution by user id and assignment id
+        public function user_assignment_solution_get($user_id = NULL, $assignment_id){
+
+        // 
+         if(empty($user_id) || empty($assignment_id)){
+            return $this->response(
+                [
+                    'success' => FALSE,
+                    'message' => 'provide an assigment id & user id'
+                ],
+                REST_Controller::HTTP_BAD_REQUEST,
+                TRUE
+            );
+        }
+        $solution = $this->Solution_model->get_solution_by_user_assignment($user_id, $assignment_id);
+        if ($solution) {
+            return $this->response(
+                [
+                    'success' => TRUE,
+                    'data' => $solution
+                ],
+                REST_Controller::HTTP_OK,
+                TRUE
+            );
+        }
+
+        return $this->response(
+            [
+                'success' => FALSE,
+                'message' => 'Solution Not found'
+            ],
+            REST_Controller::HTTP_BAD_REQUEST,
+            TRUE
+        );
+
+    }
+
+
 
 // get stats
     public function count_solutions_get(){

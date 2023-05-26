@@ -137,24 +137,21 @@ class Result extends REST_Controller
 
     }
 
-    // Provide the specific user result base on the assignment id
-    public function user_assignment_solution_get($user_id = NULL, $assignment_id = NULL){
+    // Get result by solution id
+        public function solution_result_get($id = NULL){
 
-        //
-        if(empty($user_id) || empty($assignment_id)){
+        // 
+         if($id === NULL){
             return $this->response(
                 [
                     'success' => FALSE,
-                    'message' => 'Validation error, All Fields are required',
+                    'message' => 'provide an id'
                 ],
                 REST_Controller::HTTP_BAD_REQUEST,
                 TRUE
             );
         }
-       
-
-        #
-        $result   = $result = $this->Result_model->getSolutionWithResult($user_id, $assignment_id);
+        $result = $this->Result_model->get_result_by_solution($id);
         if ($result) {
             return $this->response(
                 [
@@ -169,12 +166,12 @@ class Result extends REST_Controller
         return $this->response(
             [
                 'success' => FALSE,
-                'message' => 'Result not found'
+                'message' => 'Result Not found'
             ],
-            REST_Controller::HTTP_NOT_FOUND,
+            REST_Controller::HTTP_BAD_REQUEST,
             TRUE
         );
-        
+
     }
 
 }

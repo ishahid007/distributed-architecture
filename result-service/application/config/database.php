@@ -73,12 +73,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+
 $db['default'] = array(
 	'dsn'	   => '',
-	'hostname' => 'mysql_microservices',
-	'username' => 'root',
+	'hostname' => 'mysql_result',
+	'username' => 'user',
 	'password' => 'password',
-	'database' => 'microservices',
+	'database' => 'result',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -1,8 +1,23 @@
 #  Software Architecture, A Microservices project in PHP Codeigniter
+
+## Important Note
+Please make sure to clone the .htaccess file as well atleast for the "admin" and "student" panel as otherwise, the routes won't work properly.
+If git isn't providing it, make sure to copy it directly via "admin/.htaccess" and "student/.htaccess" accordingly. (BIG Thanks).
+
+
 ## Introduction
 This project is a proof-of-concept of Microservice Architecture build using CodeIgniter 3 and Bootstrap 3 for Front-end.  
 
-There are four main decoupled service in this projects: User service, Assignment service, Solution service and Result service. The services are usin a main database for the data sharing. All these dependency are already packed in one docker-compose.
+There are four main decoupled service in this projects: User service, Assignment service, Solution service and Result service. All the services are using their separate database so they're not affected with the other one in any case.
+The data is shared between tables using REST API to their respective modules.
+
+All these dependency are already packed in one docker-compose.
+
+Apart from that, there 2 main modules (panel) that are admin and student that runs the complete web app. They are not using any database and rather are sending REST API calls to the above services in order to fetch the data and operate on that.
+
+- Admin
+- Student
+
 
 ## Prerequiste
 - Docker
@@ -26,13 +41,33 @@ By running the command docker-compose up, Docker Compose reads the docker-compos
 
 
 ## Database Migration
-To start database migration, docker compose has been designed in a way to automatically import the database 'microservices.sql' file to our 'mysql' container. We can access it via route (by default, the database services will run on 9081)
+To start database migration, docker compose has been designed in a way to automatically import all the databases of each service e.g 'users.sql' file to our 'mysql' container. We can access it via route (E.g by default, the database services will run on 9082, 9082, 9083, 9084)
+
+## Assignment 
 ```http
 http://localhost:9081/
 Username: user
 Password: password
 ```
 
+## Solution
+```http
+http://localhost:9082/
+Username: user
+Password: password
+```
+## Result
+```http
+http://localhost:9083/
+Username: user
+Password: password
+```
+## User
+```http
+http://localhost:9084/
+Username: user
+Password: password
+```
 
 ## ADMIN PANEL (How It Works)?
 
@@ -70,6 +105,7 @@ Click ON "Create New" button in order to create a new entry of assignment.
 Click ON "Delete" button in order to delete the assignment.
 
 
+
 **3a** - Solutions (List)
 ```http
 http://localhost:8081/solutions
@@ -95,20 +131,76 @@ http://localhost:8081/users
 View all available users along with the name, email and role.
 You can "View / Edit" and "Delete" the user.
 
-**2b** - Users (View)
+
+**4b** - Users (View)
 
 Click ON "View" button in order to view the user or edit that too
 Also, clicking on "Title" will do the same action.
 
-**2c** - Users (Create)
+**4c** - Users (Create)
 ```http
 http://localhost:8081/users/create
 ```
 Click ON "Create New" button in order to create a new entry of user (Admin or Student Role).
 
-**2d** - Users (Delete)
+**4d** - Users (Delete)
 
 Click ON "Delete" button in order to delete the user.
+
+
+**5** - Admin Logout (Sign out)
+```http
+http://localhost:8081/logout
+```
+Click ON "Logout" to sign out of the admin role
+
+
+
+
+
+
+## STUDENT PANEL (How It Works)?
+
+**Start** 
+```http
+http://localhost:8082/login
+E-mail: student@student.com
+Password: 123456
+```
+
+
+
+**1** - Dashboard => Contains all the stats information regarding to the Total number of, Assignments and rest of the features will be added in future.
+
+**2a** - Assignments (List)
+```http
+http://localhost:8082/assignments
+```
+View all available assignments along with the title, deadline.
+You can "View / Reply" and "Submit" your solution to the assignment.
+
+**2b** - Assignments (View)
+
+Click ON "View" button in order to view the assignment.
+
+Also, clicking on "Title" will do the same action.
+
+You can submit your solution by clicking on either "Submit now" Or "Reply".
+
+
+**2c** - Solution (Rating)
+
+Click on "Assignment" that you have submitted the solution and on the same page, you will find the rating, rated by the admin.
+
+
+
+**3** - Student Logout (Sign out)
+```http
+http://localhost:8082/logout
+```
+Click ON "Logout" to sign out of the student role
+
+
 
 ## API
 
@@ -272,6 +364,10 @@ GET localhost:8083/index.php/api/v1/solution/{solution_id}
 DELETE localhost:8083/index.php/api/v1/solution/{solution_id}
 ```
 
+#### Get a solution by assignment id
+```http
+GET localhost:8083/index.php/api/v1/solution/user-assignment-solution/{assignment_id}
+```
 
 #### Total Count of solutions
 ```http
@@ -309,9 +405,9 @@ POST Body
 GET localhost:8083/index.php/api/v1/result/{result_id}
 ```
 
-#### Get a result by user id and assignment id (combined)
+#### Get a result by solution id
 ```http
-GET localhost:8083/index.php/api/v1/result/user_assignment_solution/{user_id}/{assignment_id}
+GET localhost:8083/index.php/api/v1/result/solution-result/{solution_id}
 ```
 
 #### Delete a result

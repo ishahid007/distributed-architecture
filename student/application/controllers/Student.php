@@ -73,12 +73,20 @@ class Student extends BASE_Controller_Student {
         	$data['assignment']   = $response->data;
 
 
-        	// Fetch the result too
-        	$result 		= $this->http->request("GET", $this->result_url.'user_assignment_solution/'.$this->user_id.'/'.$id);
-			$result 		= json_decode($result);
+        	// Fetch the solution too	
+        	$solution 		= $this->http->request("GET", $this->solution_url.'/user-assignment-solution/'.$this->user_id.'/'.$id);
+			$solution 		= json_decode($solution);
 			// 
-			if($result->success == true)
-        		$data['result'] = $result->data;
+			if($solution->success == true){
+        		$data['solution'] = $solution->data;
+
+	        	// Fetch the result too
+	        	$result 		= $this->http->request("GET", $this->result_url.'/solution-result/'.$solution->data->id);
+				$result 		= json_decode($result);
+				// 
+				if($result->success == true)
+	        		$data['result'] = $result->data;
+			}
 
         	// 
 
