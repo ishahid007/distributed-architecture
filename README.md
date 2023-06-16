@@ -68,6 +68,8 @@ http://localhost:9084/
 Username: user
 Password: password
 ```
+![alt text](https://github.com/ishahid007/distributed-architecture/blob/main/dbdigram.png)
+
 
 ## ADMIN PANEL (How It Works)?
 
