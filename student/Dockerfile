@@ -16,5 +16,8 @@ COPY . /var/www/html/
 # Copy the .htaccess file
 COPY .htaccess /var/www/html/.htaccess
 
+# Set the read - write access to the cache folder
+RUN chmod -R 777 /var/www/html/application/cache/session
+
 # Set the working directory
 WORKDIR /var/www/html/
