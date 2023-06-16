@@ -280,12 +280,12 @@ Request Body
 ### Assignment Service
 #### Get list of assignments
 ```http
-GET localhost:8083/index.php/api/v1/assignment
+GET localhost:8084/index.php/api/v1/assignment
 ```
 
 #### Create a new assignment
 ```http
-POST localhost:8083/index.php/api/v1/assignment
+POST localhost:8084/index.php/api/v1/assignment
 ```
 
 POST Body
@@ -300,12 +300,12 @@ POST Body
 #### Get a assignment
 
 ```http
-GET localhost:8083/index.php/api/v1/assignment/{assignment_id}
+GET localhost:8084/index.php/api/v1/assignment/{assignment_id}
 ```
 
 #### Update a assignment 
 ```http
-POST localhost:8083/index.php/api/v1/assignment/update/{assignment_id}
+POST localhost:8084/index.php/api/v1/assignment/update/{assignment_id}
 ```
 
 Request Body
@@ -319,13 +319,13 @@ Request Body
 
 #### Delete a assignment
 ```http
-DELETE localhost:8083/index.php/api/v1/assignment/{assignment_id}
+DELETE localhost:8084/index.php/api/v1/assignment/{assignment_id}
 ```
 
 
 #### Total Count of assignments
 ```http
-GET localhost:8083/index.php/api/v1/assignment/count_assignments
+GET localhost:8084/index.php/api/v1/assignment/count_assignments
 ```
 
 
@@ -337,12 +337,12 @@ GET localhost:8083/index.php/api/v1/assignment/count_assignments
 ### Solution Service
 #### Get list of solutions
 ```http
-GET localhost:8083/index.php/api/v1/solution
+GET localhost:8085/index.php/api/v1/solution
 ```
 
 #### Create a new solution
 ```http
-POST localhost:8083/index.php/api/v1/solution
+POST localhost:8085/index.php/api/v1/solution
 ```
 
 POST Body
@@ -357,23 +357,23 @@ POST Body
 #### Get a solution
 
 ```http
-GET localhost:8083/index.php/api/v1/solution/{solution_id}
+GET localhost:8085/index.php/api/v1/solution/{solution_id}
 ```
 
 
 #### Delete a solution
 ```http
-DELETE localhost:8083/index.php/api/v1/solution/{solution_id}
+DELETE localhost:8085/index.php/api/v1/solution/{solution_id}
 ```
 
 #### Get a solution by assignment id
 ```http
-GET localhost:8083/index.php/api/v1/solution/user-assignment-solution/{assignment_id}
+GET localhost:8085/index.php/api/v1/solution/user-assignment-solution/{assignment_id}
 ```
 
 #### Total Count of solutions
 ```http
-GET localhost:8083/index.php/api/v1/solution/count_solutions
+GET localhost:8085/index.php/api/v1/solution/count_solutions
 ```
 
 
@@ -384,12 +384,12 @@ GET localhost:8083/index.php/api/v1/solution/count_solutions
 ### Result Service
 #### Get list of results
 ```http
-GET localhost:8083/index.php/api/v1/result
+GET localhost:8086/index.php/api/v1/result
 ```
 
 #### Create a new result
 ```http
-POST localhost:8083/index.php/api/v1/result
+POST localhost:8086/index.php/api/v1/result
 ```
 
 POST Body
@@ -404,15 +404,15 @@ POST Body
 #### Get a result
 
 ```http
-GET localhost:8083/index.php/api/v1/result/{result_id}
+GET localhost:8086/index.php/api/v1/result/{result_id}
 ```
 
 #### Get a result by solution id
 ```http
-GET localhost:8083/index.php/api/v1/result/solution-result/{solution_id}
+GET localhost:8086/index.php/api/v1/result/solution-result/{solution_id}
 ```
 
 #### Delete a result
 ```http
-DELETE localhost:8083/index.php/api/v1/result/{result_id}
+DELETE localhost:8086/index.php/api/v1/result/{result_id}
 ```
